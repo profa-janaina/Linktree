@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+
+*{
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --cor-bg:#268cff;
+    --cor-sec: #f20789;
+    --cor-word:#ffffff;
+}
+
+::selection{
+    background-color: var(--cor-sec);
+}
+
+.bio{
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 0;
+    /* background-color: var(--cor-bg); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.info, .links{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info img{
+    width: 20%;
+    min-width: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-word);
+}
+
+h1::selection{
+    background-color: var(--cor-word);
+}
+
+.info h1{
+    color: var(--cor-sec);
+    font-size: 3.2em;
+    font-family: 'Mouse Memoirs', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.info h2{
+    color: var(--cor-word);
+    font-size: 1.5em;
+}
+
+.info p{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.links{
+    gap: 20px;
+}
+
+.links a{
+    padding: 20px 30px;
+    width: 80%;
+    background-color: var(--cor-word);
+    color: var(--cor-sec);
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 18px;
+    border-bottom: 4px solid var(--cor-sec);
+    border-right: 4px solid var(--cor-sec);
+    transition: all 0.7s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.links a::selection{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.links a:hover{
+    background-color: var(--cor-sec);
+    color: var(--cor-word);
+    border-bottom: 4px solid var(--cor-word);
+    border-right: 4px solid var(--cor-word);
+}
+
+span{
+    padding-right: 7px;
+}
+
+@media screen and (max-width: 700px) {
+    .info, .links{
+        width: 70%;
+    }
+}
